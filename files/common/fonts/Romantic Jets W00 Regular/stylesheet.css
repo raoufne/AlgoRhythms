@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'RomanticJetsRegular';
+    src: url('Romantic Jets W00 Regular.eot');
+    src: url('Romantic Jets W00 Regular.eot?#iefix') format('embedded-opentype'),
+         url('Romantic Jets W00 Regular.woff') format('woff'),
+         url('Romantic Jets W00 Regular.ttf') format('truetype'),
+         url('Romantic Jets W00 Regular.svg#RomanticJetsRegular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}

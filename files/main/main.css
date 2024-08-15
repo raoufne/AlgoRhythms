@@ -1,0 +1,145 @@
+#title3 {
+    font-family: 'RomanticJetsRegular';
+    font-size: 36px; /* Larger font size */
+    color: black;
+}
+
+#title4 {
+    font-family: 'SilkscreenNormal';
+    font-size: 36px;
+    font-weight: bold;
+    color: #00BFFF;
+    display: inline-block;
+}
+
+#title4 .letter {
+    display: inline-block;
+    animation: wave 1.5s infinite;
+}
+
+#title4 .letter:nth-child(1) {
+	margin: -5px;
+    animation-delay: 0s;
+}
+
+#title4 .letter:nth-child(2) {
+	margin: -5px;
+    animation-delay: 0.1s;
+}
+
+#title4 .letter:nth-child(3) {
+	margin: -5px;
+    animation-delay: 0.2s;
+}
+
+#title4 .letter:nth-child(4) {
+	margin: -5px;
+    animation-delay: 0.3s;
+}
+
+#title4 .letter:nth-child(5) {
+	margin: -5px;
+    animation-delay: 0.4s;
+}
+
+#title4 .letter:nth-child(6) {
+	margin: -5px;
+    animation-delay: 0.5s;
+}
+
+#title4 .letter:nth-child(7) {
+	margin: -5px;
+    animation-delay: 0.6s;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    75% {
+        transform: translateY(-10px);
+    }
+}
+
+#main-content {
+    text-align: center;
+}
+
+#logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Increased gap between logos */
+    margin-bottom: 40px; /* Increased space between logos and grid */
+}
+
+.logo-container {
+    text-align: center;
+}
+
+.logo {
+    width: 120px; /* Increased logo size */
+    border-style: solid;
+    border-color: #EEFF77; /* Same border as header logo */
+    border-radius: 0.25rem;
+}
+
+.description {
+	max-width: 300px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#algorithms {
+    display: flex;
+    flex-direction: column; /* Align algorithms vertically */
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 50px; /* Increased space */
+}
+
+.algo-item {
+    position: relative;
+    background-color: black;
+    color: white;
+    padding: 23px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+    width: 95%;
+}
+
+.algo-item img {
+	height: 64px;
+	width: 85px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    max-width: 85px;
+    transition: transform 0.3s ease;
+}
+
+.algo-item:hover {
+    background-color: #333;
+}
+
+.algo-item:hover img {
+    transform: translateX(0);
+}
+
+#algorithms a {
+    display: block; /* Ensure the <a> tag behaves as a block-level element */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+	width: 90%;
+}
+

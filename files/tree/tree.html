@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.R-Tree</title>
+    <link rel="icon" href="../common/icons/AR.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../common/fonts/Silkscreennormal/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../common/fonts/Romantic Jets W00 Regular/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="../common/css/common.css">
+</head>
+<body>
+    <header id="header">
+        <a href="../main/main.html" style="display: block; text-decoration: none; color: inherit;">
+            <img id="logo" src="../common/icons/AR.png" alt="Logo">
+            <span id="title1">ALGO</span>
+            <span id="title2">RHTHYMS</span>
+        </a>
+        <span id="title" onclick="triggerPanels()">Tree</span>
+    </header>
+    <main id="main-content">
+        <div id="control-buttons">
+            <button id="previous-step" onclick="handlePreviousStep(event)">Previous Step</button>
+            <button id="play" onclick="play()">Play</button>
+			<button id="pause" onclick="pause()"style="display: none;">Pause</button>			
+            <button id="next-step" onclick="handleNextStep(event)">Next Step</button>
+        </div>
+        <div id="animation-container">
+            <div id="left-panel">
+                <h2>Modes</h2>
+                <ul id="modes-list">
+                    <li id="mode-BST" class="mode-option selected">BST</li>
+                    <li id="mode-AVL" class="mode-option">AVL</li>
+                </ul>
+                <h2>Actions</h2>
+                <ul id="actions-list">
+                    <li class="action-option">Create
+						<div id="create-empty" class="execAction new-menu-option" onclick="example(0)">
+					      <p>Empty</p>
+					    </div>
+					    <div id="create-random-input" class="new-menu-option">
+					      N = <input id="N" type="number" title="Enter an Integer" autocomplete="off"> 
+					    </div>
+					    <div id="create-random" class="execAction new-menu-option" onclick="random()">
+					      <p>Random</p>
+					    </div>
+					</li>
+                    <li class="action-option">Search
+						<div id="search-input" class="new-menu-option">
+					      x = <input id="v-search" type="number" title="Enter an Integer" autocomplete="off">
+					    </div>
+					    <div id="search-exact" class="execAction new-menu-option" onclick="searchVertex(0)">
+					      <p>Search</p>
+					    </div>
+					</li>
+                    <li class="action-option">Insert
+						<div id="insert-input" class="new-menu-option">
+					      x = <input id="v-insert" type="text" title="Enter an Integer or comma-separated array of Integers" autocomplete="off">
+					    </div>
+					    <div id="insert-go" class="execAction new-menu-option" onclick="insertVertex()">
+					      <p>Insert</p>
+					    </div>
+					</li>
+					<li class="action-option">Delete
+						<div id="remove-input" class="new-menu-option">
+						  x = <input id="v-remove" type="text" title="Enter an Integer or comma-separated array of Integers" autocomplete="off" >
+						</div>
+						<div id="remove-go" class="execAction new-menu-option" onclick="removeVertex()" >
+						  <p>Delete</p>
+						</div>
+					</li>
+					<li class="action-option">Traverse
+						<div id="inorder-go" class="execAction new-menu-option" onclick="traversal(0)">
+						  <p>Inorder</p>
+						</div>
+						<div id="preorder-go" class="execAction new-menu-option" onclick="traversal(1)">
+						  <p>Preorder</p>
+						</div>
+						<div id="postorder-go" class="execAction new-menu-option" onclick="traversal(2)">
+						  <p>Postorder</p>
+						</div>
+					</li>
+                </ul>
+            </div>
+            <div id="animation-area">
+                <div id="animation-background">AlgoRhythms</div>
+				<p id="info" "="""></p>
+            </div>
+            <div id="right-panel">
+                <div id="current">
+
+                </div>
+				<div id="status">
+                    <p></p>
+
+                </div>
+                <div id="codetrace">
+                </div>
+            </div>
+
+        </div>
+    </main>    
+	<footer id="footer">
+        <button id="about-button">ABOUT</button>
+        <div id="about-popup">
+            <p style="font-weight:bold">Supervised by Ms.Afef MDHAFER</p>
+			<br>
+			<p style="font-weight:bold">This work comes to you by "TeMo" (Raouf NECHMI)</p>
+			<br>
+			<p style="font-weight:bold; margin: 0px">&#169; 2023/2024</p>
+        </div>
+    </footer>
+	
+	<script src="../common/js/jquery-3.7.0.min.js"></script>
+    <script src="../common/js/jquery-ui.min.js"></script>
+    <script src="../common/js/d3.min.js"></script>
+    
+	<script src="../common/js/common.js"></script>
+
+    <script src="../common/js/GraphEdgeWidget.js"></script>
+    <script src="../common/js/GraphVertexWidget.js"></script>
+    <script src="../common/js/GraphWidget.js"></script>
+
+
+	<script src="tree.js"></script>
+	<script src="BSTWidget.js"></script>
+	
+</body>
+</html>	

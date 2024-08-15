@@ -1,0 +1,271 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Adjust as needed */
+    background-color: #EEFFA5; /* Example background color */
+}
+
+#header {
+    top: 0;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-bottom: 0px; /* Increased space from top */
+}
+
+#logo {
+    border-style: solid;
+    border-color: #EEFF77;
+    border-radius: 0.25rem;
+    width: 50px;
+    vertical-align: middle;
+}
+
+#title {
+	cursor: pointer;
+	padding: 2px;
+    border-style: solid;
+    border-color: #EEFF77;
+    border-radius: 0.25rem;
+    width: 50px;
+    vertical-align: middle;
+}
+
+#title1 {
+    font-family: 'RomanticJetsRegular';
+    display: inline-block;
+    font-size: 28px; /* Increased font size */
+    margin-left: 20px;
+    vertical-align: middle;
+    color: black;
+}
+
+#title2 {
+    font-family: 'SilkscreenNormal';
+    display: inline-block;
+    font-size: 28px; /* Increased font size */
+    margin-left: -4px;
+    vertical-align: middle;
+    font-weight: bold;
+    color: #00BFFF;
+}
+
+#control-buttons {
+    text-align: center;
+    margin: 0 0;
+}
+
+#control-buttons button {
+    width: 32.6%;
+    padding: 10px 0px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    border: 2px solid #00BFFF; /* Border matching the color scheme */
+    background-color: grey;
+    color: white;
+}
+
+#animation-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+}
+
+#left-panel {
+    background-color: grey;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: width 0.3s ease;
+}
+
+#left-panel h2{
+    border-bottom: 2px solid #EEFF77;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+
+#left-panel ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+#left-panel li{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#left-panel li:hover, #right-panel div:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#left-panel li.selected {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#right-panel {
+    background-color: grey;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+#current {
+    text-align: center;
+	font-weight: bold;
+}
+
+#right-panel p {
+	text-align: unset;
+    margin: 5px;
+	border-radius: 5px;
+	text-align: unset;
+	font-size: 14px;
+}
+
+#right-panel div {
+	list-style-type: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#animation-area {
+	overflow: hidden; /* Ensure content stays within bounds */
+    flex: 1;
+    background-color: #EEFFA5;
+    color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 50px; /* Adjust as needed */
+    font-family: 'SilkscreenNormal';
+    border-radius: 10px;
+    transition: margin-left 0.3s ease, margin-right 0.3s ease;
+}
+
+#footer {
+    background-color: grey;
+    text-align: center;
+    padding: 5px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#about-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #EEFF77; /* Border like header logo */
+    border-radius: 0.25rem;
+}
+
+#about-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000; /* Ensure pop-up is on top */
+    text-align: center;
+}
+
+.transparent-dark-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    z-index: 999; /* Ensure overlay is below pop-up */
+    display: none; /* Initially hidden */
+}
+
+#actions-list {
+    height: 60%; /* Adjust the height as needed */
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+
+#actions-list::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    background: transparent; /* Optional: just to make scrollbar invisible */
+}
+
+#actions-list:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.action-option {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.new-menu-option {
+    display: none;
+    position: relative;
+    padding: 5px;
+    background-color: #ddd;
+    margin-top: 5px;
+}
+
+.action-option:hover .new-menu-option,
+.new-menu-option:hover {
+    display: block;
+}
+
+.new-menu-option input {
+    width: 60px;
+}
+
+#animation-background {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#maingraph {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#info {
+	color: black;
+	margin:10px;
+	font-size:20px;
+}
